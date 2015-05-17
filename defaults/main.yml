@@ -68,7 +68,7 @@ git_ignore:
 - heading: "Composer"
   entries:
   - "composer.phar"
-- heading: Vagrant
+- heading: "Vagrant"
   entries:
   - ".vagrant/"
 - heading: "Sass"

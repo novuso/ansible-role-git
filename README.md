@@ -113,7 +113,7 @@ By default, the following gitignore entries are included:
     - heading: "Composer"
       entries:
       - "composer.phar"
-    - heading: Vagrant
+    - heading: "Vagrant"
       entries:
       - ".vagrant/"
     - heading: "Sass"
