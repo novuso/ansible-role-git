@@ -41,6 +41,8 @@ None
 
 `git_aliases` is a list of aliases added to git config.
 
+By default, the following aliases are used:
+
     git_aliases:
     - "new = flow init --showcommands"
     - "flist = flow feature list"
@@ -84,6 +86,8 @@ None
 
 * **heading** *required* Human-readable comment for the section
 * **entries** *required* List of gitignore patterns
+
+By default, the following gitignore entries are included:
 
     git_ignore:
     - heading: "Linux"
