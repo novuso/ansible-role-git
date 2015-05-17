@@ -1,0 +1,13 @@
+# {{ ansible_managed }}
+
+{% for section in git_ignore %}
+{% if section.heading %}
+# {{ section.heading }}
+{% endif %}
+{% if section.entries %}
+{% for entry in section.entries %}
+{{ entry }}
+{% endfor %}
+{% endif %}
+
+{% endfor %}

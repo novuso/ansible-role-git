@@ -1,0 +1,38 @@
+# {{ ansible_managed }}
+
+{% if git_config_user_name or git_config_user_email %}
+[user]
+{% if git_config_user_name %}
+    name = {{ git_config_user_name }}
+{% endif %}
+{% if git_config_user_email %}
+    email = {{ git_config_user_email }}
+{% endif %}
+{% endif %}
+{% if git_config_core_editor or git_config_core_excludesfile %}
+
+[core]
+{% if git_config_core_editor %}
+    editor = {{ git_config_core_editor }}
+{% endif %}
+{% if git_config_core_excludesfile %}
+    excludesfile = {{ git_config_core_excludesfile }}
+{% endif %}
+{% endif %}
+{% if git_config_color_ui %}
+
+[color]
+    ui = {{ git_config_color_ui }}
+{% endif %}
+{% if git_config_push_default %}
+
+[push]
+    default = {{ git_config_push_default }}
+{% endif %}
+{% if git_aliases %}
+
+[alias]
+{% for alias in git_aliases %}
+    {{ alias }}
+{% endfor %}
+{% endif %}

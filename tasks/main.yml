@@ -1,0 +1,28 @@
+---
+- name: "git installed"
+  sudo: yes
+  apt:
+    name: "git"
+    state: present
+    update_cache: yes
+    cache_valid_time: 3600
+
+- name: "git flow installed"
+  sudo: yes
+  apt:
+    name: "git-flow"
+    state: present
+    update_cache: yes
+    cache_valid_time: 3600
+  when: git_flow
+
+- name: "git global config"
+  template:
+    src: "gitconfig.j2"
+    dest: "~/.gitconfig"
+
+- name: "git global ignore"
+  template:
+    src: "gitignore.j2"
+    dest: "{{ git_config_core_excludesfile }}"
+  when: git_ignore and git_config_core_excludesfile
