@@ -11,6 +11,8 @@ None
 
 ## Role Variables
 
+Ansible variables are listed here along with their default values:
+
 `git_flow` flags whether or not to install `git-flow`.
 
     git_flow: true
